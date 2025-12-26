@@ -422,15 +422,6 @@ function PublicProjectOverview() {
                                 >
                                     Back
                                 </MDButton>
-                                <MDButton
-                                    variant="gradient"
-                                    color="info"
-                                    size="small"
-                                    onClick={() => navigate(`/projects/${project.id}/edit`)}
-                                >
-                                    <Icon sx={{ mr: 0.5 }}>edit</Icon>
-                                    Edit project
-                                </MDButton>
                             </MDBox>
                         </MDBox>
 

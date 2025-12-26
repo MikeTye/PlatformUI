@@ -1,6 +1,6 @@
 // Layouts
 import ProfileGate from "layouts/users/profileGate";
-import PublicProfileOverview from "layouts/users/public-profile";
+import UserProfileView from "layouts/users/user-overview";
 import MyProfileOverview from "layouts/users/my-profile";
 import CreateUserProfile from "layouts/users/create-user";
 import EditUserProfile from "layouts/users/edit-user";
@@ -46,12 +46,6 @@ const routes = [
     },
 
     {
-        key: "public-profile",
-        route: "/users/:id",
-        component: <PublicProfileOverview />,
-    },
-
-    {
         key: "create-user",
         route: "/users/new",
         component: <CreateUserProfile />,
@@ -67,6 +61,12 @@ const routes = [
         key: "my-profile-overview",
         route: "/users/me/profile",
         component: <MyProfileOverview />,
+    },
+
+        {
+        key: "user-overview",
+        route: "/users/:id",
+        component: <UserProfileView />,
     },
 
 

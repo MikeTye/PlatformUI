@@ -578,7 +578,7 @@ export default function EditUserProfile() {
                                 />
                             </Grid>
 
-                            <Grid item xs={12}>
+                            {/* <Grid item xs={12}>
                                 <MDBox display="flex" flexWrap="wrap" gap={2}>
                                     <FormControlLabel
                                         control={<Switch checked={form.is_public} onChange={handleSwitch("is_public")} />}
@@ -593,7 +593,7 @@ export default function EditUserProfile() {
                                         label="Show phone"
                                     />
                                 </MDBox>
-                            </Grid>
+                            </Grid> */}
 
                             <Grid item xs={12}>
                                 <FormField

@@ -410,16 +410,6 @@ function PublicCompanyOverview() {
                                 >
                                     Back
                                 </MDButton>
-                                {isOwner && (
-                                    <MDButton
-                                        variant="gradient"
-                                        color="info"
-                                        size="small"
-                                        onClick={() => navigate(`/companies/${company.id}/edit`)}
-                                    >
-                                        Edit company
-                                    </MDButton>
-                                )}
                             </MDBox>
                         </MDBox>
 

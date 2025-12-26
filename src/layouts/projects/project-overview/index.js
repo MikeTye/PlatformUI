@@ -378,6 +378,9 @@ function ProjectOverview() {
         return /\.(png|jpg|jpeg|webp|gif)$/i.test(u);
     };
 
+    const user = JSON.parse(sessionStorage.getItem("user") || "{}");
+    const isOwner = project?.owner_user_id === user?.id;
+
     let images = (mediaItems || [])
         .filter(isProbablyImage)
         .map((item) => ({
@@ -445,15 +448,17 @@ function ProjectOverview() {
                                 >
                                     Back
                                 </MDButton>
-                                <MDButton
-                                    variant="gradient"
-                                    color="info"
-                                    size="small"
-                                    onClick={() => navigate(`/projects/${project.id}/edit`)}
-                                >
-                                    <Icon sx={{ mr: 0.5 }}>edit</Icon>
-                                    Edit project
-                                </MDButton>
+                                {isOwner && (
+                                    <MDButton
+                                        variant="gradient"
+                                        color="info"
+                                        size="small"
+                                        onClick={() => navigate(`/projects/${project.id}/edit`)}
+                                    >
+                                        <Icon sx={{ mr: 0.5 }}>edit</Icon>
+                                        Edit project
+                                    </MDButton>
+                                )}
                             </MDBox>
                         </MDBox>
 
